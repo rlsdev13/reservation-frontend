@@ -17,7 +17,7 @@ export const fetchData = ( endpoint : string, data : any, method='GET' ) => {
 }
 
 
-export const fetchDataToken = ( endpoint : string, data : any, method='GET' ) => {
+export const fetchDataToken = ( endpoint : string, data : any = null, method='GET' ) => {
 
     const url = `${endpoint}`;//localhost:4000/api/event
     const token = localStorage.getItem('token') || '';
@@ -26,7 +26,7 @@ export const fetchDataToken = ( endpoint : string, data : any, method='GET' ) =>
         return fetch( url, {
             method,
             headers :{
-                'x-token' : token
+                'Authorization' : `bearer ${token}`
             }
         });
     }else{
@@ -34,7 +34,7 @@ export const fetchDataToken = ( endpoint : string, data : any, method='GET' ) =>
             method,
             headers : {
                 'Content-Type' : 'application/json',
-                'x-token' : token
+                'Authorization' : `bearer ${token}`
             },
             body : JSON.stringify( data )
         });

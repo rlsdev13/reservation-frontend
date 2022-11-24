@@ -5,6 +5,6 @@ import Dashboard from '@/components/Dashboard.vue';
 </script>
 
 <template>
-    <Navbar/>
+    <Navbar />
     <Dashboard />
 </template>

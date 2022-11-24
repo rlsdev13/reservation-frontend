@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, type Ref } from 'vue';
-import { useRouter, useRoute } from 'vue-router';
+import { useRouter } from 'vue-router';
 import { fetchData } from '../lib/fetch';
 import Swal from 'sweetalert2';
 const authUrl = import.meta.env.VITE_AUTH_URL;
