@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import { ref, type Ref } from 'vue';
+import { useRouter, useRoute } from 'vue-router';
 import { fetchData } from '../lib/fetch';
 import Swal from 'sweetalert2';
 const authUrl = import.meta.env.VITE_AUTH_URL;
 
 const email: Ref<string> = ref('rafael@gmail.com');
 const password: Ref<string> = ref('123456');
+const route = useRouter();
 
 async function login() {
     const data = {
@@ -21,6 +23,7 @@ async function login() {
     const { access_token, user } = await response.json();
     localStorage.setItem( 'token', access_token );
     localStorage.setItem( 'user', JSON.stringify(user));
+    route.push('/dashboard')
 }
 
 </script>
