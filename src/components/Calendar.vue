@@ -7,7 +7,9 @@
   const calendarOptions = {
     plugins: [ dayGridPlugin, interactionPlugin ],
     initialView: 'dayGridMonth',
-    weekends: true // initial value
+    weekends: true, // initial value
+    height : "auto"
+
   }
 
   function toggleWeekends() {
