@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import Card from './Card.vue';
-import { defineProps, toRefs } from "vue";
+import { toRefs } from "vue";
 
 const props = defineProps<{
-    boardrooms : any[];
+    boardrooms : any[] | undefined;
 }>()
 
 const { boardrooms } = toRefs( props );

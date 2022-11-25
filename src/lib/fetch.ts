@@ -17,12 +17,12 @@ export const fetchData = ( endpoint : string, data : any, method='GET' ) => {
 }
 
 
-export const fetchDataToken = ( endpoint : string, data : any = null, method='GET' ) => {
+export const fetchDataToken = ( endpoint : string, data : any = undefined , method='GET' ) => {
 
     const url = `${endpoint}`;//localhost:4000/api/event
     const token = localStorage.getItem('token') || '';
 
-    if ( method === 'GET' ) {
+    if ( method === 'GET' || method === 'DELETE' ) {
         return fetch( url, {
             method,
             headers :{

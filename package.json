@@ -12,6 +12,7 @@
     "daisyui": "^2.42.0",
     "pinia": "^2.0.23",
     "sweetalert2": "^11.6.13",
+    "vue-final-modal": "^3.4.11",
     "vue-router": "^4.1.5"
   },
   "devDependencies": {
