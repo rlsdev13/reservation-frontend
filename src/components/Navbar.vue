@@ -14,9 +14,16 @@
                 </label>
                 <ul tabindex="0"
                     class="menu menu-compact dropdown-content mt-5 p-2 shadow-lg bg-base-100 rounded-box w-52">
-                    <li><a>Salas de juntas</a></li>
-                    <li><a>Reservar sala</a></li>
-                    <li><a>Usuarios</a></li>
+                    
+                    <li>                    
+                        <router-link to="/dashboard">Salas de juntas</router-link>
+                    </li>
+                    <li>                    
+                        <router-link to="/reservations">Reservaciones</router-link>
+                    </li>
+                    <li>                    
+                        <router-link to="/dashboard">Usuarios</router-link>
+                    </li>
                 </ul>
             </div>
         </div>
